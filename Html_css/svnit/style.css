@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color:#0483b3;
+    --sec-color:#7fd4f4
+}
+
+.intro {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro img {
+    height: 80px;
+}
+
+nav {
+    width: 100%;
+    min-height: 70px;
+    max-height: 250px;
+    background-color: var(--primary-color);
+    padding: 15px 20px 15px 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tag {
+    color: white;
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100,
+    "GRAD" 0;
+
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    align-items: start;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100,
+    "GRAD" 0;
+}
+
+a:hover {
+    color: red;
+}
+
+
+.option {
+    height: 70px;
+    width: 250px;
+    color: black;
+    background-color: var(--sec-color);
+    padding: 10px 15px;
+}
+
+aside {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+#left {
+    margin-left: 10px;
+}
+#right {
+    margin-right: 10px;
+}
+
+.multiple {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.dropdown {
+    background-color: var(--primary-color);
+    position: absolute;
+    padding: 20px 20px 20px 20px;
+    display: none;
+}
+.dropdown ul {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 8px;
+}
+.dropdown ul li {
+    height: 30px;
+    list-style: none;
+}
+.dropdown ul li a {
+    font-weight: normal;
+    font-size: 15px;
+    color: #ffffff;
+}
+.dropdown ul li:last-of-type {
+    height: fit-content;
+}
+.dropdown ul li:hover a{
+    color: var(--sec-color);
+}
+.tag:hover .dropdown{
+    z-index: 100;
+    display: block;
+}
+
+
+
+.slides {
+    position: relative;
+    aspect-ratio: 2.46/1;
+    max-width: 1180px;
+    overflow: hidden;
+    height: auto;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.prev {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 40px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+    top: 42%;
+    left: 0px;
+    cursor: pointer;
+}
+.next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 40px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+    top: 42%;
+    right: 0px;
+    cursor: pointer;
+}
+.pic {
+    min-width: 100%;
+    transition:transform 0.5s linear;
+}
+.pic img {
+    width: 100%;
+    height: auto;
+}
+
+marquee {
+    margin-top: 30px;
+    color: red;
+    font-weight: 900;
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 12px;
+}
+marquee a{
+    color: red;
+    font-size: 12px;
+}
+
+@media screen and (max-width:1185px) {
+    .intro img {
+        height: 50px;
+    }
+}
+@media screen and (max-width:990px) {
+    main {
+        width: 100%;
+        flex-wrap: wrap;
+        height: auto;
+        align-items: flex-start;
+    }
+    .slides {
+        width: 95%;
+    }
+    #left {
+        margin-left: 0px;
+    }
+    #right {
+        margin-right: 0px;
+    }
+    aside {
+        width: 95%;
+        overflow: hidden;
+    }
+    .option {
+        width: 100%;
+    }
+    marquee {
+        display: none;
+    }
+    #right {
+        padding-bottom: 30px;
+    }
+}
+@media screen and (max-width:741px) {
+    #name {
+        height: 30px;
+    }
+    .intro {
+        height: 70px;
+    }
+}
+@media screen and (max-width:520px) {
+    .intro img {
+        height: 30px;
+    }
+    #name {
+        height: 25px;
+    }
+
+    .intro {
+        height: 55px;
+    }
+}
+@media screen and (max-width:390px) {
+    #name {
+        height: 20px;
+    }
+}
